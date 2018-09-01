@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
+import { StackActions } from 'react-navigation'
 
 class Home extends Component {
   handlePress = () => {
-    this.props.navigation.navigate('Login')
+    // this.props.navigation.navigate('Login')
+    this.props.navigation.dispatch(StackActions.push({
+      routeName: 'Login',
+    }))
   }
 
   render () {
